@@ -20,3 +20,9 @@ console.log(undefined >= 0) // false
 console.log(undefined <= 0) // false
 console.log(undefined > 0) // false
 console.log(undefined < 0) // false
+
+// == , >= || >< work differently
+
+// === (also compare data types)
+console.log("2" == 2) // true conversion
+console.log("2" === 2) // false
