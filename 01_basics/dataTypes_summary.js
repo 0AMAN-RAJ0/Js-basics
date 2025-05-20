@@ -40,3 +40,31 @@ console.log(typeof myObj); // obj
 console.log(typeof myFunction); // function
 
 // null -> typeof -> *** object ***
+
+//************************************* MEMORY ALLOCATION IN JS ******************************//
+
+// STACK (primitive) , HEAP (Non-primitive)
+ 
+let channel1 = "killergaming"
+
+let channel2 = channel1
+
+channel2 = "webDevelopment"
+
+console.log(channel1) // original content does not get affected
+console.log(channel2) // only copy passed of original
+
+// heap
+
+let user1 = {
+    email : "user1@gmail.com",
+    upi : "user1@ybl"
+}
+ 
+let user2 = user1
+
+user2.email = "user2@gmail.com"
+user2.upi = "user2@ybl"
+
+console.log(user1) // due to heap both get reference of the original one not copy
+console.log(user2)
