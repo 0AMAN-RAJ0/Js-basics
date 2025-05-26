@@ -64,3 +64,20 @@ console.log(Object.values(tinderUser)) // same with values
 console.log(Object.entries(tinderUser))
 
 console.log(tinderUser.hasOwnProperty("isLoggedIn")) // chech whether a property is present or not
+
+// DESTRUCTURING for making it eaier not many times course.courseInstructor
+const course = {
+    coursename : "js-in-hindi",
+    price : 100,
+    courseInstructor : "Aman Raj",
+}
+
+const {courseInstructor : teacher} = course
+// console.log(courseInstructor)
+console.log(teacher)
+
+// {  --> JSON
+//     "name" : "hello",
+//     "age" : 23,
+//     "location" : "patna"
+// }
