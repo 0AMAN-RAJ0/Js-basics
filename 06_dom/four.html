@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Learning JS on my Own</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="Language">
+        <li>Javascript</li>
+        <li>Python</li>
+        <li>Cpp</li>
+        <li>Java</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(languageName) {
+        const newListItem = document.createElement('li')
+        newListItem.innerText = languageName // dont go for innerText because it traverse whole DOM tree
+        const parent = document.querySelector('.Language')
+        parent.appendChild(newListItem)
+    }
+
+    addLanguage("Ruby")
+    addLanguage("Typescript")
+
+    function addOptiLanguage(languageName){
+        const newListItem = document.createElement('li')
+        newListItem.appendChild(document.createTextNode(languageName)) // more optimal
+        document.querySelector('.Language').appendChild(newListItem)
+    }
+
+    addOptiLanguage("Kotlin")
+    addOptiLanguage("Golang")
+
+    // Edit
+    const secondLanguage = document.querySelector('li:nth-child(2)')
+    const newLi = document.createElement('li')
+    newLi.textContent = "Mojo"
+    secondLanguage.replaceWith(newLi)
+
+
+    //edit
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = `<li>Ruby</li>`
+
+    // remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+</script>
+</html>
