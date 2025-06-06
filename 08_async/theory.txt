@@ -1,0 +1,27 @@
+Javascript  -> (Default mode)
+- Synchronous language (Line by line execution)
+- single threaded (only use 1 thread)
+
+-> Execution Context
+     -> execute one line of code at a time
+-> Each operation waits for the last one to complete before executing
+
+Blocking Code v/s Non-Blocking Code
+      |                 |
+block the flow     Does not Block Execution
+ of program                 |
+        |          Read File async
+Read File Sync
+
+JS Engine
+    |
+Memory Heap -> for memory allocation
+Call Stack -> (1) Global Context (2) Then all the functions
+
+Web API/ Node Environment -> web api is always found in browser
+DOM API
+Set Timeout  ---> Register Callback in the task Queue --> add to the call stack
+Set Interval
+fetch()---->  Promises ---> Register Callback in the another Priority task Queue (High Priority) --> add to the call stack
+
+
