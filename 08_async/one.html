@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hi, I am Aman Learning JS</h1>
+    <button id="stop">
+        Stop
+    </button>
+</body>
+<script>
+    const sayAman = function () {
+        console.log("Aman Raj")
+    }
+
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = `Best JS Series`
+    }
+
+    setTimeout(changeText, 2000)
+    
+    const changeMe = setTimeout(sayAman, 2000) // no name needed only handler function reference
+
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearTimeout(changeMe) // you can stop that setTimeout changeMe
+        console.log("stop")
+    })
+    
+</script>
+</html>
